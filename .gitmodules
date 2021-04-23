@@ -1,0 +1,3 @@
+[submodule "Rapture/vendor/spdlog"]
+	path = Rapture/vendor/spdlog
+	url = https://github.com/gabime/spdlog

@@ -27,9 +27,15 @@
     <ClInclude Include="src\Rapture\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rapture\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Rapture\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rapture\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
