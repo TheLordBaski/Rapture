@@ -4,9 +4,11 @@
     <Filter Include="Rapture">
       <UniqueIdentifier>{68CD5796-D4AC-D631-DDC4-610849233D93}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rapture\Events">
+      <UniqueIdentifier>{6b0fa455-0a54-4f30-8280-c5c7c2fc34e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Rapture.h" />
     <ClInclude Include="src\Rapture\Application.h">
       <Filter>Rapture</Filter>
     </ClInclude>
@@ -17,6 +19,21 @@
       <Filter>Rapture</Filter>
     </ClInclude>
     <ClInclude Include="src\Rapture\Log.h">
+      <Filter>Rapture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rapture\Events\Event.h">
+      <Filter>Rapture\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rapture\Events\MouseEvent.h">
+      <Filter>Rapture\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rapture\Events\KeyEvent.h">
+      <Filter>Rapture\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rapture\Events\ApplicationEvent.h">
+      <Filter>Rapture\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rapture.h">
       <Filter>Rapture</Filter>
     </ClInclude>
   </ItemGroup>

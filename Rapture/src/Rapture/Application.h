@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace Rapture{
+namespace Rapture {
 
 	class RAPTURE_API Application
 	{

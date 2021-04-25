@@ -135,14 +135,8 @@
     <ClCompile Include="src\Sandbox.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Sandbox.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Rapture\Rapture.vcxproj">
-      <Project>{68cd5796-d4ac-d631-ddc4-610849233d93}</Project>
+      <Project>{68CD5796-D4AC-D631-DDC4-610849233D93}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
