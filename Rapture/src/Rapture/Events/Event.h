@@ -1,9 +1,8 @@
 #pragma once
+#include "rppch.h"
 
 #include "Rapture/Core.h"
 
-#include <string>
-#include <functional>
 
 namespace Rapture {
 

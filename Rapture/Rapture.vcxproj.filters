@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Rapture">
       <UniqueIdentifier>{68CD5796-D4AC-D631-DDC4-610849233D93}</UniqueIdentifier>
     </Filter>
     <Filter Include="Rapture\Events">
-      <UniqueIdentifier>{6b0fa455-0a54-4f30-8280-c5c7c2fc34e7}</UniqueIdentifier>
+      <UniqueIdentifier>{4C5423AC-3822-17B2-21B6-87D80D23F316}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rapture.h" />
     <ClInclude Include="src\Rapture\Application.h">
       <Filter>Rapture</Filter>
     </ClInclude>
@@ -18,31 +28,36 @@
     <ClInclude Include="src\Rapture\EntryPoint.h">
       <Filter>Rapture</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rapture\Log.h">
-      <Filter>Rapture</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Rapture\Events\Event.h">
+    <ClInclude Include="src\Rapture\Events\ApplicationEvent.h">
       <Filter>Rapture\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rapture\Events\MouseEvent.h">
+    <ClInclude Include="src\Rapture\Events\Event.h">
       <Filter>Rapture\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Rapture\Events\KeyEvent.h">
       <Filter>Rapture\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rapture\Events\ApplicationEvent.h">
+    <ClInclude Include="src\Rapture\Events\MouseEvent.h">
       <Filter>Rapture\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rapture.h">
+    <ClInclude Include="src\Rapture\Log.h">
       <Filter>Rapture</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rapture\Window.h">
+      <Filter>Rapture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rppch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Rapture\Application.cpp">
       <Filter>Rapture</Filter>
     </ClCompile>
     <ClCompile Include="src\Rapture\Log.cpp">
       <Filter>Rapture</Filter>
     </ClCompile>
+    <ClCompile Include="src\rppch.cpp" />
   </ItemGroup>
 </Project>

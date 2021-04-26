@@ -8,7 +8,15 @@ workspace "Rapture"
 		"Dist"
 	}
 
+	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Rapture/vendor/GLFW/include"
+
+include "Rapture/vendor/GLFW"
+
 
 project "Rapture"
 	location "Rapture"
@@ -17,6 +25,9 @@ project "Rapture"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "rppch.h"
+	pchsource "%{prj.name}/src/rppch.cpp"
 
 	files
 	{
@@ -27,7 +38,14 @@ project "Rapture"
 	includedirs
 	{
 	    "%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

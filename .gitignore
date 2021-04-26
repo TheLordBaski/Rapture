@@ -1,6 +1,7 @@
 #Directories
 .vs/
-./bin/
+!vendor/bin
+bin/
 bin-int/
 .idea/
 

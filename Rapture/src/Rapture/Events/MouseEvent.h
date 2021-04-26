@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Rapture {
 
 	class RAPTURE_API MouseMovedEvent : public Event
