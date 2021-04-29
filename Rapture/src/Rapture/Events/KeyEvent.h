@@ -17,9 +17,9 @@ namespace Rapture {
 
 	};
 
-	class RAPTURE_API KeyPressEvent : public KeyEvent {
+	class RAPTURE_API KeyPressedEvent : public KeyEvent {
 	public:
-		KeyPressEvent(int keycode, int repeatCount) : KeyEvent(keycode), m_RepeatCount(repeatCount) {}
+		KeyPressedEvent(int keycode, int repeatCount) : KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
 		inline int GetRepeatCount() const { return m_RepeatCount; }
 
