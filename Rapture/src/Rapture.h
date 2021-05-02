@@ -4,6 +4,7 @@
 
 #include "Rapture/Application.h"
 #include "Rapture/Log.h"
+#include "Rapture/Layer.h"
 
 // ---ENTRY POINT---------
 

@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Rapture/vendor/GLFW/include"
+IncludeDir["Glad"] = "Rapture/vendor/Glad/include"
 
 include "Rapture/vendor/GLFW"
+include "Rapture/vendor/Glad"
 
 
 project "Rapture"
@@ -39,24 +41,27 @@ project "Rapture"
 	{
 	    "%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "Off"
 		systemversion "latest"
 
 		defines
 		{
 			"RP_PLATFORM_WINDOWS",
-			"RP_BUILD_DLL"
+			"RP_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -66,14 +71,17 @@ project "Rapture"
 
 	filter "configurations:Debug"
 		defines "RP_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "RP_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "RP_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -113,12 +121,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "RP_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "RP_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "RP_DIST"
+		buildoptions "/MD"
 		optimize "On"

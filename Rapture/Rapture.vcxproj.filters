@@ -40,6 +40,12 @@
     <ClInclude Include="src\Rapture\Events\MouseEvent.h">
       <Filter>Rapture\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rapture\Layer.h">
+      <Filter>Rapture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rapture\LayerStack.h">
+      <Filter>Rapture</Filter>
+    </ClInclude>
     <ClInclude Include="src\Rapture\Log.h">
       <Filter>Rapture</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Rapture\Application.cpp">
+      <Filter>Rapture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rapture\Layer.cpp">
+      <Filter>Rapture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rapture\LayerStack.cpp">
       <Filter>Rapture</Filter>
     </ClCompile>
     <ClCompile Include="src\Rapture\Log.cpp">
